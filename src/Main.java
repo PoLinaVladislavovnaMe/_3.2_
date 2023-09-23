@@ -2,16 +2,14 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+      BmiService service= new BmiService();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+      double bmi1=(int) service.calculate(98, 1.87);
+      System.out.println("Ваш индекс массы тела равен " + bmi1);
+      System.out.println();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        double bmi2=(int) service.calculate(76, 1.66);
+        System.out.println("Ваш индекс массы тела равен " + bmi2);
+        System.out.println();
     }
 }
